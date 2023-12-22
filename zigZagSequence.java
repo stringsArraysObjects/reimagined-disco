@@ -11,7 +11,7 @@
               [1,4,5,3,2] , the result is a zig zag sequence.
 
  */
-
+    /*not my solution */
     public static void findZigZagSequence(int [] a, int n){
         Arrays.sort(a);
         int mid = n/2; // Modified
