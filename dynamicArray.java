@@ -45,8 +45,22 @@ class Result {
 
     public static List<Integer> dynamicArray(int n, List<List<Integer>> queries) {
     // Write your code here
-    String[][] arr;
-    int lastAnswer = 0;
+        int lastAnswer = 0;
+        List<Integer> answer = new ArrayList<>();
+        Map<Integer, List<Integer>> arr = new HashMap<>(n);
+        for (List<Integer> query : queries) {
+            int idx = (query.get(1) ^ lastAnswer) % n;
+            if (query.get(0) == 1) {
+                arr.computeIfAbsent(idx, k -> new ArrayList<>()).add(query.get(2));
+            } else {
+                List<Integer> sequence = arr.get(idx);
+                if (sequence != null) {
+                    lastAnswer = sequence.get(query.get(2) % sequence.size());
+                    answer.add(lastAnswer);
+                }
+            }
+        }
+        return answer;
 
     }
 
