@@ -44,7 +44,8 @@ class Result {
      */
 
     public static List<Integer> dynamicArray(int n, List<List<Integer>> queries) {
-    // Write your code here
+    // a solution I found that worked
+    
         int lastAnswer = 0;
         List<Integer> answer = new ArrayList<>();
         Map<Integer, List<Integer>> arr = new HashMap<>(n);
