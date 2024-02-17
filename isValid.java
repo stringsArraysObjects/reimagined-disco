@@ -24,8 +24,8 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result {
-public static String isValid(String s) {
+class Result 
+    public static String isValid(String s) {
         if(s.length()==1) return "YES";
         Map<Character, Integer> map = new HashMap<>();
      
@@ -42,10 +42,11 @@ public static String isValid(String s) {
         else if(Collections.max(list) - Collections.min(list)>1) return "NO";
         
         return "YES";
-    }
-
-//this one doesn't pass all  the tests
-public static String isValid(String s) {
+    } 
+}
+class Result { 
+    //this one doesn't pass all  the tests
+    public static String isValid(String s) {
      int letter = 0;
         for(int i=0; i<s.length();i++){
             if(s.charAt(i) == s.charAt(i++)){
@@ -62,3 +63,4 @@ public static String isValid(String s) {
         
     }
 }
+
