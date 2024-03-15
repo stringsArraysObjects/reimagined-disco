@@ -1,3 +1,15 @@
+/*PARAMETERS: SinglyLinkedListNode pointer headA: a reference to the head of a list
+*             SinglyLinkedListNode pointer headB: a reference to the head of a list
+*RESULT:      Given pointers to the heads of two sorted linked lists, merge them into 
+              a single, sorted linked list. Either head pointer may be null meaning that
+              the corresponding list is empty.
+*EXAMPLE:    headA refers to
+             1 ->3 ->7 ->NULL
+             headB refers to
+             1 ->2 ->NULL
+             The new list is
+             1 ->1 ->2 ->3 ->7 ->NULL
+ */
 import java.io.*;
 import java.math.*;
 import java.security.*;
